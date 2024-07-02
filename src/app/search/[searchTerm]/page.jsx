@@ -9,9 +9,19 @@ export default async function SearchPage({params}) {
     const results = data.results;
 
   return (
-    <div>
+    // <div>
+    //   {results && results.length === 0 ? (
+    //     <h1 className="text-center pt-5">No Results Found</h1>
+    //   ) : (
+    //     <Results results={results} />
+    //   )}
+    // </div>
+
+    <div className="w-full p-4 ">
       {results && results.length === 0 ? (
-        <h1 className="text-center pt-5">No Results Found</h1>
+        <h1 className="text-center pt-5 text-2xl font-bold text-gray-700 dark:text-white">
+          No Results Found
+        </h1>
       ) : (
         <Results results={results} />
       )}
